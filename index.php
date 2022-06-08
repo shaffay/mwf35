@@ -77,7 +77,7 @@ if(isset($_SESSION['uid']))
         </li>
         <li class="nav-item">
           <a class="nav-link text-white <?php
-          if(isset($_GET['device'])){
+          if(isset($_GET['device']) || isset($_GET['adddevice'])){
             echo "active bg-gradient-primary";
           }
           
@@ -206,6 +206,10 @@ if(isset($_SESSION['uid']))
     elseif(isset($_GET['dashboard']))
     {
       include("php/dashboard.php");
+    }
+    elseif(isset($_GET['adddevice']))
+    {
+      include("php/adddevice.php");
     }
 
 
